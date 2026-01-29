@@ -1,0 +1,67 @@
+:root {
+    --hoshino-cursor-size: 32px;
+}
+
+/* 在自定义光标启用时隐藏系统光标。
+
+body.hoshino-cursor-active {
+    cursor: none;
+}
+
+/* 光标容器，负责跟随指针位置。
+.hoshino-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--hoshino-cursor-size);
+    height: var(--hoshino-cursor-size);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 999999;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+/* 仅显示当前激活的光标。
+.hoshino-cursor.is-visible {
+    opacity: 1;
+}
+
+/* 确保 SVG 跟随容器尺寸缩放。
+.hoshino-cursor svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 点击时生成的粒子圆点。
+.hoshino-particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--hoshino-particle-color, #ff5fa2);
+    box-shadow: 0 0 8px var(--hoshino-particle-glow, rgba(255, 95, 162, 0.7));
+    pointer-events: none;
+    z-index: 999998;
+    animation: hoshino-explode var(--hoshino-particle-speed, 420ms) ease-out forwards;
+}
+
+/* 粒子爆裂动画轨迹。
+@keyframes hoshino-explode {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--hoshino-particle-x), var(--hoshino-particle-y)) scale(0.2);
+        opacity: 0;
+    }
+}
+
+/* 遵循减少动态效果设置，缩短动画时长。
+@media (prefers-reduced-motion: reduce) {
+    .hoshino-particle {
+        animation-duration: 1ms;
+    }
+}
