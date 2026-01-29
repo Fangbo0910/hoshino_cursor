@@ -18,7 +18,7 @@ Hoshino Cursor 是一个 WordPress 插件，用于在前端实现自定义 SVG �
 - 光标尺寸自动约束到 24–40px，超出则按 1/2 递归缩小
 
 ## 安装方法
-1. 将插件目录放入 `wp-content/plugins`
+1. 将除了readme文件和hoshino cursor.php之外的所有文件放入一个同目录下的assets文件夹，并将插件目录放入 `wp-content/plugins`
 2. 在 WordPress 后台启用插件：`Hoshino Cursor`
 3. 进入后台菜单：`Hoshino光标插件设置`
 
@@ -81,7 +81,7 @@ Hoshino Cursor is a WordPress plugin that provides custom SVG cursors and a pink
 - Cursor size clamped to 24–40px with recursive 1/2 scaling
 
 ## Installation
-1. Place the plugin in `wp-content/plugins/hoshino-cursor`
+1. Place all files except the readme file and hoshino cursor.php into the assets folder in the same directory, and move the plugin directory to `wp-content/plugins`.
 2. Activate the plugin in WP admin: `Hoshino Cursor`
 3. Open the menu: `Hoshino光标插件设置`
 
@@ -123,3 +123,4 @@ hoshino-cursor/
 ## Author
 Fangbo
 Blog: https://blog.dengfangbo.com
+
